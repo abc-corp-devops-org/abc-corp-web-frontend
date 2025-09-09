@@ -1,0 +1,17 @@
+name: My frontend workflow CICD
+
+on: push
+jobs:
+  buildjob:
+    name: initial jobs
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout 
+        uses: actions/checkout@v4
+      - name: print mesage
+        run: echo "Hello CICD, How are you?"  
+      - name: print files and directory
+        run: ls -la
+      - name: read README.md file
+        run: cat README.md  
+ 
